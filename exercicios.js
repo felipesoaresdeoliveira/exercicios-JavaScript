@@ -12,7 +12,6 @@ else{
 
 // 2. Crie um programa que classifica a idade de uma pessoa em categorias (criança, adolescente, adulto, idoso) com base no valor fornecido, utilizando uma estrutura de controle if-else.
 
-let prompt = require('prompt-sync')()
 
 let idade = parseInt(prompt("Digite sua idade: "))
 if (idade >= 0 && idade <= 12){
@@ -30,7 +29,6 @@ else if (idade >= 60){
 
 // 3. Implemente um programa que recebe uma nota de 0 a 10 e classifica como "Aprovado", "Recuperação", ou "Reprovado" utilizando if-else if.
 
-let prompt = require('prompt-sync')()
 
 let nota = parseFloat(prompt("Digite sua nota (0 a 10): "))
 
@@ -49,7 +47,6 @@ else{
 
 // 4. Crie um menu interativo no console que oferece ao usuário a escolha de três opções. Utilize switch-case para implementar a lógica de cada opção selecionada.
 
-let prompt = require('prompt-sync')()
 
 console.log("Menu de Opções:")
 console.log("1. somar 2 numeros")
@@ -57,20 +54,20 @@ console.log("2. subtrair 2 numeros")
 console.log("3. sair") 
 let opcao = parseInt(prompt("Escolha uma opção: "))
 
-let n1 = 0
 let n2 = 0
+let n3 = 0
 
 switch (opcao) {
     case 1:
         n1 = parseInt(prompt("Digite o primeiro número: "))
         n2 = parseInt(prompt("Digite o segundo número: "))
-        let soma = n1 + n2
+        let soma = n2 + n3
         console.log("A soma é: " + soma)
         break
     case 2:
         n1 = parseInt(prompt("Digite o primeiro número: "))
         n2 = parseInt(prompt("Digite o segundo número: "))
-        let subtracao = n1 - n2
+        let subtracao = n2 - n3
         console.log("A subtração é: " + subtracao)
         break
     case 3:
@@ -82,7 +79,6 @@ switch (opcao) {
 
 // 5. Escreva um programa que calcula o Índice de Massa Corporal (IMC) de uma pessoa e determina a categoria de peso (baixo peso, peso normal, sobrepeso, obesidade) utilizando if-else.
 
-let prompt = require('prompt-sync')()
 
 console.log("Calculadora de IMC")
 let peso = parseFloat(prompt("Digite seu peso (em kg): "))
@@ -115,7 +111,6 @@ else{
 // Triângulo escaleno: possui todos os lados diferentes (A<>B e B <> C)
 // Triângulo eqüilátero: possui todos os lados iguais (A=B e B=C)
 
-let prompt = require('prompt-sync')()
 
 console.log("Verificador de Triângulo")
 let A = parseFloat(prompt("Digite o lado A do triângulo: "))
@@ -139,7 +134,6 @@ else{
 
 // 7. As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs compradas, calcule e escreva o valor total da compra.
 
-const prompt = require('prompt-sync')()
 
 let Tmaca = prompt("Digite o número de maçãs compradas: ")
 let preco = 0
@@ -155,23 +149,22 @@ console.log("O valor total da compra é: R$ " + preco)
 
 // 8. Escreva um algoritmo para ler 2 valores (considere que não serão lidos valores iguais) e escreve-los em ordem crescente.
 
-let prompt = require('prompt-sync')()
 
-let n1 = parseInt(prompt("Digite o primeiro número: "))
-let n2 = parseInt(prompt("Digite o segundo número: "))
+let n4 = parseInt(prompt("Digite o primeiro número: "))
+let n5 = parseInt(prompt("Digite o segundo número: "))
 
-if (n1 == n2) {
+if (n4 == n5) {
     console.log("Os numeros nao podem ser iguais")
 }
 else{
     console.log("Os números em ordem decrescente são: ")
-    if (n1 < n2) {
-        console.log(n1)
-        console.log(n2)
+    if (n4 < n5) {
+        console.log(n4)
+        console.log(n5)
     }
     else {
-        console.log(n2)
-        console.log(n1)
+        console.log(n4)
+        console.log(n5)
     }
 }
 
@@ -183,68 +176,62 @@ for (let i = 10; i >= 1; i--) {
 
 // 10. Escreva um algoritmo para ler um número inteiro e escrevê-lo na tela 10 vezes.
 
-let prompt = require('prompt-sync')()
-let n1 = parseInt(prompt("Digite um número inteiro: "))
+let n6 = parseInt(prompt("Digite um número inteiro: "))
 for (let i = 0; i < 10; i++) {
-    console.log(n1);
+    console.log(n6);
 }
 
 // 11. Escreva um programa que solicita ao usuário 5 números e calcula a soma total utilizando um loop for.
 
-let prompt = require('prompt-sync')()
 
-let soma = 0
+let somar = 0
 
 for (let i = 1; i <=5; i++){
     let n1 = parseInt(prompt("Digite o " + i + "º número: "))
-    soma += n1
+    somar += n1
 }
 
-console.log("A soma total é: " + soma)
+console.log("A soma total é: " + somar)
 
 // 12. Crie um programa que exibe a tabuada de um número fornecido pelo usuário (de 1 a 10) utilizando um loop for.
 
-let prompt = require('prompt-sync')()
-let n1 = parseInt(prompt("Digite um número para ver a tabuada: "))
+let n7 = parseInt(prompt("Digite um número para ver a tabuada: "))
 console.log("Tabuada do " + n1 + ":")
 
 for (let i = 1; i <= 10; i++) {
-    let resultado = n1 * i
-    console.log(n1 + " x " + i + " = " + resultado)
+    let resultado = n7 * i
+    console.log(n7 + " x " + i + " = " + resultado)
 }
 
 //13. Fazer um algoritmo para receber números decimais até que o usuário digite 0 e fazer a média aritmética desses números.
 
-let prompt = require('prompt-sync')()
-let soma = 0
+let s1 = 0
 let contador = 0
 
 while (true) {
-    let n1 = parseFloat(prompt("Digite um número decimal (ou 0 para sair): "))
-    if (n1 === 0) {
+    let n8 = parseFloat(prompt("Digite um número decimal (ou 0 para sair): "))
+    if (n8 === 0) {
         break
     }
-    soma += n1
+    s1 += n8
     contador++
 }
 if (contador > 0) {
-    let media = soma / contador
+    let media = s1 / contador
     console.log("A média aritmética é: " + media)
 }
 
 // 14. Crie um programa que calcula o fatorial de um número fornecido pelo usuário utilizando um loop for ou while.
 
-let prompt = require('prompt-sync')()
-let n1 = parseInt(prompt("Digite um número para calcular o fatorial: "))
+let n9 = parseInt(prompt("Digite um número para calcular o fatorial: "))
 let fatorial = 1
-for (let i = n1; i > 0; i--) {
+for (let i = n9; i > 0; i--) {
     fatorial *= i
 }
-console.log("O fatorial de " + n1 + " é: " + fatorial)
+console.log("O fatorial de " + n9 + " é: " + fatorial)
 
 // 15. Escreva um programa que gera e imprime os primeiros 10 números da sequência de Fibonacci utilizando um loop for.
 
- let prompt = require('prompt-sync')()
  let seq = prompt("Digite quantos números da sequência de Fibonacci você deseja ver: ")
 
  let a = 0, b = 1, c = 0
